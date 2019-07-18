@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECC58664-4A2F-48F9-8646-2412400565B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sqi.MdManager.Services.Test</RootNamespace>
+    <AssemblyName>Sqi.MdManager.Services.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MetaDataServiceTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Models.Core\Sqi.Framework.Models.Core.csproj">
+      <Project>{27380961-B344-44B2-B625-0975BD475888}</Project>
+      <Name>Sqi.Framework.Models.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Models\Sqi.Framework.Models.csproj">
+      <Project>{2C6E1F5A-1F3A-43AB-99A3-C1BA063D954D}</Project>
+      <Name>Sqi.Framework.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Repositories.Mock\Sqi.Framework.Repositories.Mocks.csproj">
+      <Project>{85C9BD84-DBA2-4EB0-9B1C-4972C1E32B5E}</Project>
+      <Name>Sqi.Framework.Repositories.Mocks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Repositories\Sqi.Framework.Repositories.csproj">
+      <Project>{024628EC-A96E-49CF-A4CD-38BB750A4777}</Project>
+      <Name>Sqi.Framework.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Services.Core\Sqi.Framework.Services.Core.csproj">
+      <Project>{83149B5F-EE06-4AEB-96CE-E0860FC2F47F}</Project>
+      <Name>Sqi.Framework.Services.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Services\Sqi.Framework.Services.csproj">
+      <Project>{74728225-F37A-4454-AC2D-2DC55152862D}</Project>
+      <Name>Sqi.Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework\Sqi.Framework.csproj">
+      <Project>{4F273F1E-F238-4161-9A11-FFC0B078EBAB}</Project>
+      <Name>Sqi.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sqi.MdManager.Services.Core\Sqi.MdManager.Services.Core.csproj">
+      <Project>{E8B5EC75-2089-499B-BE53-2F202D88E399}</Project>
+      <Name>Sqi.MdManager.Services.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

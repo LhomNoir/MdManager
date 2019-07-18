@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5B4C180-DA3D-4503-A5B3-8CA4B37F0277}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>Sqi.MdManager.Application.Core</RootNamespace>
+    <AssemblyName>Sqi.MdManager.Application.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Core.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Docking.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Layout.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resources\MdManagerLabels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MdManagerLabels.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Items\MetaFieldItemTemplateViewModel.cs" />
+    <Compile Include="ViewModels\Items\MdUserItemViewModel.cs" />
+    <Compile Include="ViewModels\Items\MetaEntityItemViewModel.cs" />
+    <Compile Include="ViewModels\Items\RegularExpressionItemViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\Panels\BooleanMetaFieldEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\BooleanMetaFieldTemplateEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\DateTimeMetaFieldEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\DateTimeMetaFieldTemplateEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\DecimalMetaFieldEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\DecimalMetaFieldTemplateEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\EntityMetaFieldEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\EntityMetaFieldTemplateEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\IntegerMetaFieldEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\IntegerMetaFieldTemplateEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\MetaEntityEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\MetaFieldEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\MetaFieldTemplateEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\StringMetaFieldEditionPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\MetaFieldTemplateListPanelViewModel.cs" />
+    <Compile Include="ViewModels\Panels\StringMetaFieldTemplateEditionPanelViewModel.cs" />
+    <Compile Include="Views\Controls\MetaEntityEditionView.xaml.cs">
+      <DependentUpon>MetaEntityEditionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\MetaFieldEditionView.xaml.cs">
+      <DependentUpon>MetaFieldEditionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\MetaFieldTemplateEditionView.xaml.cs">
+      <DependentUpon>MetaFieldTemplateEditionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\BooleanMetaFieldEditionPanelView.xaml.cs">
+      <DependentUpon>BooleanMetaFieldEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\BooleanMetaFieldTemplateEditionPanelView.xaml.cs">
+      <DependentUpon>BooleanMetaFieldTemplateEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\DateTimeMetaFieldEditionPanelView.xaml.cs">
+      <DependentUpon>DateTimeMetaFieldEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\DateTimeMetaFieldTemplateEditionPanelView.xaml.cs">
+      <DependentUpon>DateTimeMetaFieldTemplateEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\DecimalMetaFieldEditionPanelView.xaml.cs">
+      <DependentUpon>DecimalMetaFieldEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\DecimalMetaFieldTemplateEditionPanelView.xaml.cs">
+      <DependentUpon>DecimalMetaFieldTemplateEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\EntityMetaFieldEditionPanelView.xaml.cs">
+      <DependentUpon>EntityMetaFieldEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\EntityMetaFieldTemplateEditionPanelView.xaml.cs">
+      <DependentUpon>EntityMetaFieldTemplateEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\IntegerMetaFieldEditionPanelView.xaml.cs">
+      <DependentUpon>IntegerMetaFieldEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\IntegerMetaFieldTemplateEditionPanelView.xaml.cs">
+      <DependentUpon>IntegerMetaFieldTemplateEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\MetaEntityEditionPanelView.xaml.cs">
+      <DependentUpon>MetaEntityEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\MetaFieldTemplateEditionPanelView.xaml.cs">
+      <DependentUpon>MetaFieldTemplateEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\StringMetaFieldEditionPanelView.xaml.cs">
+      <DependentUpon>StringMetaFieldEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\MetaFieldTemplateListPanelView.xaml.cs">
+      <DependentUpon>MetaFieldTemplateListPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Panels\StringMetaFieldTemplateEditionPanelView.xaml.cs">
+      <DependentUpon>StringMetaFieldTemplateEditionPanelView.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MdManagerLabels.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MdManagerLabels.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Application\Sqi.Framework.Application.csproj">
+      <Project>{D959D8C4-5A86-4C48-8991-AA9A8E7F9AB0}</Project>
+      <Name>Sqi.Framework.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Models\Sqi.Framework.Models.csproj">
+      <Project>{2C6E1F5A-1F3A-43AB-99A3-C1BA063D954D}</Project>
+      <Name>Sqi.Framework.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Services.Core\Sqi.Framework.Services.Core.csproj">
+      <Project>{83149B5F-EE06-4AEB-96CE-E0860FC2F47F}</Project>
+      <Name>Sqi.Framework.Services.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework.Services\Sqi.Framework.Services.csproj">
+      <Project>{74728225-F37A-4454-AC2D-2DC55152862D}</Project>
+      <Name>Sqi.Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Projects\Sqi.Framework\Sqi.Framework.csproj">
+      <Project>{4F273F1E-F238-4161-9A11-FFC0B078EBAB}</Project>
+      <Name>Sqi.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sqi.MdManager.Models\Sqi.MdManager.Models.csproj">
+      <Project>{1040A542-C313-4D2D-9516-1243AEADF7FD}</Project>
+      <Name>Sqi.MdManager.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sqi.MdManager.Services\Sqi.MdManager.Services.csproj">
+      <Project>{C2663D4A-8D2E-40F8-869B-F056807791AA}</Project>
+      <Name>Sqi.MdManager.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Controls\MetaEntityEditionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\MetaFieldEditionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\MetaFieldTemplateEditionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\BooleanMetaFieldEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\BooleanMetaFieldTemplateEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\DateTimeMetaFieldEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\DateTimeMetaFieldTemplateEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\DecimalMetaFieldEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\DecimalMetaFieldTemplateEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\EntityMetaFieldEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\EntityMetaFieldTemplateEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\IntegerMetaFieldEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\IntegerMetaFieldTemplateEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\MetaEntityEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\MetaFieldTemplateEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\StringMetaFieldEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\MetaFieldTemplateListPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Panels\StringMetaFieldTemplateEditionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
